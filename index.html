@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Vale Regalo ❤️</title>
+</head>
+<body style="
+    text-align:center;
+    font-family:Arial;
+    background-color: #ffd6e8; 
+    background-image: url('foto2.jpg');
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding:40px;
+">
+
+<div style="
+        background: rgba(255,255,255,0.85);
+        padding: 30px;
+        border-radius: 15px;
+        max-width: 360px;
+        margin: auto;
+    ">
+	<h2>🎁 VALE REGALO 🎉</h2>
+	<p id="descripcion" style="font-size:14px; color:#555;">
+   		 Hola mi amor. Esto es un pequeño test para comprobar si de verdad eres una crack adivinando regalos (lo eres). Es muy 			 sencillito, solo tienes que elegir la opción correcta. ¡SUERTE!😉 FELIZ NAVIDAD, TE QUIERO MUCHO 💚
+	</p>
+	<p>¿De qué equipo es la camiseta?</p>
+
+
+	<button onclick="respuesta('sevilla')">Camiseta Retro del Sevilla 🔴⚪</button><br><br>
+	<button onclick="respuesta('ceuta')">Camiseta del Ceuta Pompeii ⚫⚪ </button><br><br>
+	<button onclick="respuesta('kevin')">Camiseta del Nápoles con KDB 8 🔵</button><br><br>
+	<button onclick="respuesta('todas')">Todas son correctas 🤟</button>
+
+	<p id="resultado" style="font-size:18px;"></p>
+</div>
+
+<script>
+function respuesta(opcion) {
+    const r = document.getElementById("resultado");
+    const d = document.getElementById("descripcion");
+
+    if (opcion == 'ceuta') {
+        r.innerHTML = "🎉 ¡Correcto! Has encontrado tu regalo 💚";
+        r.style.color = "green";
+        d.innerHTML = "Si ya te la he dado, espero que te guste y si no te la he dado, espero que llegue prontito. Como has acertado tienes la opción de canjear un regalito extra... UNA CENITA ROMÁNTICA. Te quiero 💚";
+    } else if(opcion == 'todas'){
+        r.innerHTML = "❌ No cobro tanto y además me quedaría sin regalos para las demás fechas ";
+        r.style.color = "red";
+        d.innerHTML = "Sigue intentándolo jiji";
+    }
+      else {
+	r.innerHTML = "❌ No es mala opción pero no es la correcta";
+        r.style.color = "red";
+        d.innerHTML = "Sigue intentándolo jiji";
+    }
+}
+</script>
+
+</body>
+</html>
